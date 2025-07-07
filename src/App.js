@@ -13,12 +13,14 @@ import ProtectedRoute from "./pages/ProtectedRoute";
 import AdminDashboard from "./pages/AdminDashboard";
 import AdminLogin from "./pages/AdminLogin";
 import ProductList from "./pages/ProductList";
+import Navbar from "./pages/Navbar";
 
 
 export default function App() {
   return (
     <AuthProvider>
       {/* Remove BrowserRouter or Router here */}
+      {/* <Navbar /> */}
       <Routes>
         <Route path="/" element={<ProductList />} />
         <Route path="/product/:id" element={<ProductDetail />} />
