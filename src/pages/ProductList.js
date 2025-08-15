@@ -27,7 +27,7 @@ export default function ProductList() {
       : data.filter((p) => p.category === activeCategory);
 
   // Button visibility state
-  const [showButton, setShowButton] = useState(false);
+  // const [showButton, setShowButton] = useState(false);
 
   const handleCategoryChange = (cat) => {
     setActiveCategory(cat);
@@ -44,20 +44,20 @@ export default function ProductList() {
   }, [activeCategory]);
 
   // Scroll event to show button when user scrolls down more than 100px
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 100) {
-        setShowButton(true);
-      } else {
-        setShowButton(false);
-      }
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     if (window.scrollY > 100) {
+  //       setShowButton(true);
+  //     } else {
+  //       setShowButton(false);
+  //     }
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Check initially
+  //   window.addEventListener("scroll", handleScroll);
+  //   handleScroll(); // Check initially
 
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
 
   return (
     <div className="bg-gray-100 min-h-screen">
@@ -70,7 +70,7 @@ export default function ProductList() {
             ប្រភេទពិលទាំងអស់
           </h1>
 
-          <button
+          {/* <button
             onClick={() => alert("hello")}
             className={`bg-red-800 p-4 rounded text-white transition-opacity duration-300 ${showButton
               ? "opacity-100 pointer-events-auto"
@@ -78,7 +78,7 @@ export default function ProductList() {
               }`}
           >
             language
-          </button>
+          </button> */}
         </div>
 
         <div className="flex flex-wrap gap-1 mb-4">

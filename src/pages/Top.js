@@ -63,7 +63,7 @@ export default function Top() {
                         onClick={(e) => e.stopPropagation()} // Prevent closing on inner click
                     >
                         <h2 className="text-xl font-semibold mb-4 text-center">Admin Login</h2>
-                        <form onSubmit={handleLoginSubmit} className="space-y-4">
+                        <form onSubmit={''/*  */} className="space-y-4">
                             <input
                                 type="text"
                                 placeholder="Username"
